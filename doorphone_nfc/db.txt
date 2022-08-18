@@ -1,0 +1,5 @@
+# Simple DB
+
+User-Password=1234;   Permission=opendoor # active
+
+# User-Password=4321;Permission=opendoor # not active

@@ -22,4 +22,8 @@ Keyboard -> Auth provider
 https://github.com/Lexycon/android-pn532-hce
 https://medium.com/the-almanac/how-to-build-a-simple-smart-card-emulator-reader-for-android-7975fae4040f
 
+# Development and build
 
+```sh
+pip install -r /path/to/requirements.txt
+```

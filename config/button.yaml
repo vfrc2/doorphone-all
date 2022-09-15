@@ -1,0 +1,4 @@
+gpio: 3
+debounce: 200 #ms
+exec:
+  on_press: call.sh

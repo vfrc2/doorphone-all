@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <gpiod.h>
 #include <unistd.h>
 #include "main.h"
@@ -60,6 +61,10 @@ int main(int argc, char **argv)
 			ret = -1;
 			goto release_line;
 		}
+
+        if (arguments.cmd)
+            system(arguments.cmd);
+
 		sleep(0.2);
 
 		i++;

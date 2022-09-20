@@ -1,0 +1,35 @@
+diff --git a/doorphone_button/main.c b/doorphone_button/main.c
+index f611480..0cccef7 100644
+--- a/doorphone_button/main.c
++++ b/doorphone_button/main.c
+@@ -13,7 +13,6 @@ int main(int argc, char **argv)
+ {
+     argp_parse(&argp, argc, argv, 0, 0, &arguments);
+ 
+-       unsigned int line_num = 25;     // GPIO Pin #25
+        struct timespec ts = { 1, 0 };
+        struct gpiod_line_event event;
+        struct gpiod_chip *chip;
+@@ -43,19 +42,19 @@ int main(int argc, char **argv)
+ 
+        /* Notify event up to 20 times */
+        i = 0;
+-       while (i <= 20) {
++       while (1) {
+                ret = gpiod_line_event_wait(line, &ts);
+                if (ret < 0) {
+                        perror("Wait event notification failed\n");
+                        ret = -1;
+                        goto release_line;
+                } else if (ret == 0) {
+-                       printf("Wait event notification on line #%u timeout\n", line_num);
++                       printf("Wait event notification on line timeout\n");
+                        continue;
+                }
+ 
+                ret = gpiod_line_event_read(line, &event);
+-               printf("Get event notification on line #%u %d times\n", line_num, i);
++               printf("Get event notification on line %d times\n", i);
+                if (ret < 0) {
+                        perror("Read last event notification failed\n");
+                        ret = -1;

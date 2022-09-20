@@ -25,7 +25,7 @@ def on_exit(signum, frame):
 
 
 signal.signal(signal.SIGINT, on_exit);
-# GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BOARD)
 # GPIO.add_event_callback(3, on_button_presed, bouncetime=20 )
 
 while True:

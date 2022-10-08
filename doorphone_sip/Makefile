@@ -10,7 +10,7 @@ LIBS=-mglibc -llinphone -lmediastreamer_base
 _DEPS = 
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o linphone_helper.o call_strategy_seq.o
+_OBJ = main.o call_strategy_seq.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 

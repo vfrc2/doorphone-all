@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 
   running = RUN_STATE_RUNNING;
 
-  if (arguments.daemon > 0)
+  if (arguments.daemon == 0)
   {
     call_strategy();
   }

@@ -1,0 +1,11 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 2N5109-dk_Transistors-Bipolar-BJT-RF
+F https://my.centralsemi.com/get_document.php?cmp=1&mergetype=pd&mergepath=pd&pdf_id=2N5109.PDF
+$ENDCMP
+#
+$CMP JSM1-12V-5-dk_Automotive-Relays
+F https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Electric%20Works%20PDFs/JS-M_Series_Rev_Dec_2011.pdf
+$ENDCMP
+#
+#End Doc Library

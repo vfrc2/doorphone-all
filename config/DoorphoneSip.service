@@ -1,0 +1,12 @@
+[Unit]
+Description=Doorphone sip service
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=doorphone
+ExecStart=doorphone 
+
+[Install]
+WantedBy=multi-user.target

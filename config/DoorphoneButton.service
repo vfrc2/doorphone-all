@@ -1,0 +1,12 @@
+[Unit]
+Description=Doorphone button service
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=doorphone
+ExecStart=doorphone_button -d gpiochip0 -l 6 "sigkill -SIGUSR1 ${cat /var/run/doorphone.pid}
+
+[Install]
+WantedBy=multi-user.target
